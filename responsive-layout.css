@@ -1,0 +1,649 @@
+/* Deployment-safe layout: one source of truth for the opening and project pages. */
+
+html,
+body {
+  overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* The map remains a background layer; the copy participates in the grid. */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  min-height: max(790px, 100svh);
+  padding-top: clamp(2.4rem, 6vh, 4.5rem);
+  padding-bottom: 1.7rem;
+}
+
+.hero > .hero-index,
+.hero > .hero-copy,
+.hero > .hero-foot {
+  position: relative;
+  z-index: 3;
+  grid-column: 1;
+}
+
+.hero-index {
+  grid-row: 1;
+}
+
+.hero-copy {
+  grid-row: 2;
+  align-self: center;
+  pointer-events: none;
+}
+
+.hero > .hero-copy {
+  position: static;
+  z-index: auto;
+}
+
+.hero-text {
+  position: relative;
+  top: auto;
+  left: auto;
+  z-index: 3;
+  width: min(530px, 44vw);
+}
+
+.hero h1 {
+  max-width: 530px;
+  font-size: clamp(4.15rem, 7.45vw, 8.25rem);
+  line-height: .86;
+}
+
+.hero-statement {
+  max-width: 410px;
+  margin-top: clamp(1.6rem, 3vw, 2.55rem);
+}
+
+.hero-statement-lead {
+  font-size: clamp(1.4rem, 2vw, 1.95rem);
+}
+
+.hero-statement-detail {
+  max-width: 370px;
+  margin-top: .85rem !important;
+  font-size: clamp(.95rem, 1.12vw, 1.06rem);
+}
+
+.hero-foot {
+  grid-row: 3;
+  align-self: end;
+}
+
+.hero-visual {
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.hero-visual img {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 56% 52%;
+  transform: none;
+  animation: none;
+  will-change: auto;
+}
+
+.hero-visual figcaption {
+  right: var(--gutter);
+  bottom: clamp(5rem, 9vh, 6.5rem);
+  left: auto;
+  width: min(270px, 24vw);
+}
+
+.hero-beacon {
+  margin: -8px;
+}
+
+.beacon-one { left: 59%; bottom: 22%; }
+.beacon-two { left: 74%; top: 50%; }
+.beacon-three { right: 9%; top: 22%; }
+
+/* Homepage cards retain their original full-bleed treatment. */
+.project-cover-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* The AI studies carry their own low-light detail, so do not bury them in an extra dark filter. */
+.ai-tool-image {
+  filter: saturate(.88) contrast(1.04) brightness(.9);
+}
+
+.ai-tool-visual:hover .ai-tool-image {
+  filter: saturate(.98) contrast(1.05) brightness(1);
+}
+
+/* The lens label is metadata; it should not determine the position of the reading area. */
+.system-detail {
+  justify-content: center;
+}
+
+.system-detail .stage-marker {
+  position: absolute;
+  top: clamp(1.1rem, 2.2vw, 1.7rem);
+  left: clamp(1.1rem, 2.2vw, 1.7rem);
+  margin: 0;
+}
+
+.system-detail .stage-copy {
+  width: min(100%, 31rem);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.system-detail .stage-title,
+.system-detail .stage-text,
+.system-detail .stage-proof {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.system-detail .stage-title,
+.system-detail .stage-text,
+.system-detail .stage-proof,
+.system-detail .stage-proof span {
+  text-align: center;
+}
+
+/* Three chapters replace the previous split work and personal areas. */
+.portfolio-explorer {
+  display: grid;
+  grid-template-columns: minmax(205px, .72fr) minmax(0, 2fr);
+  min-height: 570px;
+  overflow: hidden;
+  color: #ece8df;
+  border: 1px solid rgba(236, 232, 223, .28);
+  background: #0b0f11;
+}
+
+.portfolio-tabs {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(236, 232, 223, .28);
+}
+
+.portfolio-tab {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .9rem;
+  min-height: 145px;
+  padding: 1.1rem;
+  color: rgba(236, 232, 223, .58);
+  border: 0;
+  border-bottom: 1px solid rgba(236, 232, 223, .28);
+  background: transparent;
+  cursor: pointer;
+  font: 600 clamp(1.03rem, 1.6vw, 1.35rem)/1.05 var(--serif);
+  letter-spacing: -.035em;
+  text-align: left;
+  transition: color .25s ease, background .25s ease;
+}
+
+.portfolio-tab:last-child {
+  border-bottom: 0;
+}
+
+.portfolio-tab span {
+  color: #71cbd7;
+  font: .62rem var(--mono);
+  letter-spacing: .05em;
+}
+
+.portfolio-tab:hover,
+.portfolio-tab:focus-visible,
+.portfolio-tab.is-active {
+  color: #f4f0e8;
+  outline: none;
+  background: rgba(27, 74, 84, .32);
+}
+
+.portfolio-panels,
+.portfolio-panel {
+  min-width: 0;
+}
+
+.portfolio-panel {
+  display: flex;
+  min-height: 568px;
+  flex-direction: column;
+  padding: clamp(1.4rem, 3vw, 3.2rem);
+  background: linear-gradient(145deg, #11191b, #0a0d0f 62%);
+}
+
+.portfolio-panel[hidden] {
+  display: none;
+}
+
+.portfolio-panel-heading {
+  display: grid;
+  grid-template-columns: minmax(155px, .65fr) minmax(0, 1.55fr);
+  gap: 1.4rem;
+  align-items: start;
+  margin-bottom: clamp(1.4rem, 3vw, 2.4rem);
+}
+
+.portfolio-panel-heading .eyebrow {
+  margin: .35rem 0 0;
+  color: #8ecedc;
+}
+
+.portfolio-panel-heading h2 {
+  max-width: 13ch;
+  margin: 0;
+  color: #f1ede4;
+  font-size: clamp(2.2rem, 4.2vw, 4.6rem);
+  letter-spacing: -.075em;
+  line-height: .92;
+}
+
+.portfolio-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  min-height: 0;
+  margin-top: auto;
+  overflow: hidden;
+  background: rgba(236, 232, 223, .22);
+}
+
+.portfolio-project {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  background: #111619;
+}
+
+.portfolio-project--feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(260px, .84fr);
+  min-height: 374px;
+  margin-top: auto;
+  overflow: hidden;
+  background: #111619;
+}
+
+.portfolio-project-media {
+  position: relative;
+  display: block;
+  min-height: 214px;
+  overflow: hidden;
+  background: #06090a;
+}
+
+.portfolio-project-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(4, 7, 9, .03), rgba(4, 7, 9, .58));
+}
+
+.portfolio-project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .55s cubic-bezier(.2, .75, .2, 1), filter .35s ease;
+}
+
+.portfolio-project:hover .portfolio-project-media img,
+.portfolio-project-media:focus-visible img {
+  transform: scale(1.045);
+  filter: brightness(1.1) saturate(1.08);
+}
+
+.portfolio-project--feature .portfolio-project-media {
+  min-height: 100%;
+}
+
+.portfolio-project-copy {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(1.1rem, 2vw, 1.7rem);
+}
+
+.portfolio-project-copy h3 {
+  margin: 0 0 .8rem;
+  color: #f1ede4;
+  font-size: clamp(1.35rem, 2vw, 2.1rem);
+  letter-spacing: -.06em;
+  line-height: .96;
+}
+
+.portfolio-project-copy > p:not(.portfolio-project-meta) {
+  max-width: 43ch;
+  margin: 0;
+  color: #c8c4bb;
+  font: .96rem/1.52 var(--serif);
+}
+
+.portfolio-project-meta {
+  margin: auto 0 1rem;
+  padding-top: 1rem;
+  color: #d2d7d3;
+  border-top: 1px solid rgba(236, 232, 223, .2);
+  font: .68rem/1.5 var(--mono);
+}
+
+.portfolio-project-meta span {
+  display: block;
+  margin-bottom: .3rem;
+  color: #78d2df;
+  font-size: .58rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.portfolio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem 1.15rem;
+}
+
+.portfolio-actions .text-link {
+  font-size: .67rem;
+}
+
+/* Selected work is an editorial left-image / right-introduction layout. */
+@media (min-width: 801px) {
+  #work .case-card,
+  #work .case-card--primary,
+  #work .case-card--split {
+    grid-template-columns: minmax(3rem, .7fr) minmax(0, 2fr) minmax(0, 2fr);
+    grid-template-areas: "number media copy";
+    align-items: stretch;
+    gap: clamp(1.5rem, 3.2vw, 3.5rem);
+  }
+
+  #work .case-number {
+    grid-area: number;
+  }
+
+  #work .case-media {
+    grid-area: media;
+    min-height: clamp(390px, 34vw, 540px);
+  }
+
+  #work .case-copy,
+  #work .case-card--primary .case-copy {
+    grid-area: copy;
+    align-self: center;
+    max-width: none;
+    margin-top: 0;
+  }
+
+  #work .case-card--terralink .project-cover-image {
+    object-position: 65% center;
+  }
+}
+
+/* Secondary project covers are full-bleed.  This prevents the stage background
+   from showing as black side bars when an asset is a fraction off the stage ratio. */
+.project-stage-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Project pages pair a readable introduction with a complete cover image. */
+.project-page .project-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+  grid-template-areas:
+    'eyebrow stage'
+    'title stage'
+    'intro stage';
+  align-items: start;
+  column-gap: clamp(2.2rem, 6vw, 7rem);
+  min-height: 0;
+  padding-top: clamp(4rem, 8vw, 7.5rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  background: linear-gradient(180deg, #0d1518 0%, #0a0e10 100%);
+}
+
+.project-page .project-hero > .eyebrow {
+  grid-area: eyebrow;
+  margin: 0 0 1.35rem;
+}
+
+.project-page .project-hero h1 {
+  grid-area: title;
+  max-width: 700px;
+  margin: 0 0 2rem;
+  font-size: clamp(3.9rem, 7vw, 7.5rem);
+  line-height: .84;
+}
+
+.project-page .project-intro {
+  grid-area: intro;
+  margin: 0;
+}
+
+.project-page .project-stage {
+  grid-area: stage;
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 1;
+  align-self: center;
+}
+
+.project-page .project-hero::before {
+  content: none;
+}
+
+.project-page .project-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-page .project-stage-image {
+  filter: saturate(.9) contrast(1.03) brightness(.88);
+}
+
+/* Terra-Link is a film-led landscape case, not a square-cover case. */
+.project-page.project-terralink .project-stage {
+  aspect-ratio: 16 / 9;
+  background: #07171b;
+}
+
+.stage-terralink {
+  color: #9ee1d8;
+}
+
+.terra-film {
+  padding-top: clamp(3.5rem, 7vw, 6.5rem);
+  padding-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.terra-film-heading {
+  display: grid;
+  grid-template-columns: minmax(150px, .7fr) minmax(0, 2fr);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.terra-film-heading h2 {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  letter-spacing: -.07em;
+  line-height: .95;
+}
+
+.terra-film-frame {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(236, 232, 223, .35);
+  background: #07171b;
+}
+
+.terra-film-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #07171b;
+}
+
+.terra-film-frame figcaption {
+  max-width: 600px;
+  padding: .9rem 1rem 1.05rem;
+  color: var(--muted);
+  font: .68rem/1.5 var(--mono);
+}
+
+@media (max-width: 980px) {
+  .hero {
+    min-height: max(760px, 100svh);
+  }
+
+  .hero-text {
+    width: min(500px, 54vw);
+  }
+
+  .hero h1 {
+    font-size: clamp(4rem, 9.25vw, 6.7rem);
+  }
+
+  .hero-visual figcaption {
+    width: min(250px, 32vw);
+  }
+
+  .project-page .project-hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'eyebrow'
+      'title'
+      'intro'
+      'stage';
+    row-gap: 0;
+  }
+
+  .project-page .project-stage {
+    width: min(100%, 620px);
+    margin-top: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .terra-film-heading {
+    grid-template-columns: 1fr;
+    gap: .9rem;
+  }
+
+  .portfolio-panel-heading {
+    grid-template-columns: 1fr;
+    gap: .65rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    min-height: max(700px, 100svh);
+    padding-top: 2rem;
+  }
+
+  .hero-text {
+    width: min(100%, 420px);
+  }
+
+  .hero h1 {
+    max-width: 390px;
+    font-size: clamp(3.8rem, 15.5vw, 5.55rem);
+  }
+
+  .hero-statement {
+    max-width: 330px;
+  }
+
+  .hero-visual img {
+    object-position: 60% 52%;
+  }
+
+  .hero-visual figcaption {
+    right: var(--gutter);
+    bottom: 5.25rem;
+    width: min(225px, calc(100vw - (2 * var(--gutter))));
+  }
+
+  .project-page .project-hero h1 {
+    font-size: clamp(3.55rem, 15vw, 5.25rem);
+  }
+
+  .project-page .project-stage {
+    width: 100%;
+  }
+
+  .portfolio-explorer {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .portfolio-tabs {
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 1px solid rgba(236, 232, 223, .28);
+  }
+
+  .portfolio-tab {
+    min-width: 0;
+    min-height: 100px;
+    padding: .85rem .75rem;
+    border-right: 1px solid rgba(236, 232, 223, .28);
+    border-bottom: 0;
+    font-size: .92rem;
+  }
+
+  .portfolio-tab:last-child {
+    border-right: 0;
+  }
+
+  .portfolio-tab span {
+    font-size: .52rem;
+  }
+
+  .portfolio-panel {
+    min-height: 0;
+    padding: 1.15rem;
+  }
+
+  .portfolio-panel-heading h2 {
+    font-size: clamp(2.2rem, 11vw, 3.7rem);
+  }
+
+  .portfolio-projects,
+  .portfolio-project--feature {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-project--feature .portfolio-project-media {
+    min-height: 270px;
+  }
+
+  .portfolio-project-media {
+    min-height: 240px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual::after,
+  .hero-beacon.is-active::after {
+    animation: none;
+  }
+}
+

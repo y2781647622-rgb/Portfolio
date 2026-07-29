@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ways Through — the portfolio of Yang Shenghua, a human-centred designer working across systems, stories, and interaction." />
+    <title>Ways Through — Yang Shenghua</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive-layout.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="progress-meter" aria-hidden="true"><i></i></div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Back to top">[YS]</a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-label">Menu</span><span class="menu-mark" aria-hidden="true"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#approach">Approach</a>
+        <a href="#work">Work</a>
+        <a href="#ai-practice">AI practice</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero shell">
+        <div class="hero-index eyebrow">Ways Through / Portfolio 2026</div>
+        <div class="hero-copy">
+          <div class="hero-text">
+            <p class="eyebrow hero-kicker">Yang Shenghua · Human-centred designer</p>
+            <h1><span>Make systems</span><em>legible.</em></h1>
+            <div class="hero-statement">
+              <p class="hero-statement-lead">Research-led.<br /><em>Humanly understood.</em></p>
+              <p class="hero-statement-detail">I turn field research, human needs, and technical constraints into interactive systems people can understand, question, and shape.</p>
+            </div>
+          </div>
+          <figure class="hero-visual" data-active-route="observe">
+            <img src="assets/ways-through-hero.png" alt="An abstract route crossing a dark, topographic urban landscape" />
+            <span class="hero-visual-label" aria-hidden="true">Click a node</span>
+            <a class="hero-beacon beacon-one is-active" href="#approach" data-route="observe" data-source-x="55.5" data-source-y="31.5" aria-current="true" aria-label="Observe: open approach"></a>
+            <a class="hero-beacon beacon-two" href="#work" data-route="map" data-source-x="45.5" data-source-y="43" aria-label="Map: open selected work"></a>
+            <a class="hero-beacon beacon-three" href="#ai-practice" data-route="test" data-source-x="47.5" data-source-y="56" aria-label="Test: open AI practice"></a>
+            <figcaption aria-live="polite">
+              <span class="hero-route-status">01 / Observe</span>
+              <strong class="hero-route-title">Frame the question.</strong>
+              <span class="hero-route-copy">Find human signals before deciding what to change.</span>
+              <span class="hero-route-jump">Open / Approach</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="hero-foot">
+          <span>Singapore / Human-centred design</span>
+          <span>Research · systems · interaction</span>
+        </div>
+      </section>
+
+      <section class="proof-band" aria-label="What I bring">
+        <div class="shell proof-grid">
+          <p class="eyebrow">What I bring</p>
+          <ol class="proof-list">
+            <li><span>01</span><strong>Frame the real problem</strong><p>before committing to an answer.</p></li>
+            <li><span>02</span><strong>Make complexity legible</strong><p>for users, teams, and stakeholders.</p></li>
+            <li><span>03</span><strong>Use AI with judgment</strong><p>as a collaborator, never as a substitute for evidence.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="approach" class="approach section-space">
+        <div class="shell">
+          <div class="section-heading approach-heading">
+            <p class="eyebrow">01 / A working point of view</p>
+            <p class="section-note">A project is rarely a straight line. Select a satellite to see the move I return to when the way forward is unclear.</p>
+          </div>
+          <div class="approach-explorer approach-system" data-active-lens="frame">
+            <div class="system-map" aria-label="Interactive design-method solar system">
+              <p class="system-instruction">Select a satellite</p>
+              <span class="system-orbit system-orbit--outer" aria-hidden="true"></span>
+              <span class="system-orbit system-orbit--middle" aria-hidden="true"></span>
+              <span class="system-orbit system-orbit--inner" aria-hidden="true"></span>
+              <div class="system-core" aria-hidden="true"><span class="core-surface"></span><span class="core-label">Works</span></div>
+              <button class="system-satellite system-satellite--frame is-active" type="button" data-lens="frame" aria-pressed="true" aria-controls="lens-panel" aria-label="Frame: research and fieldwork">
+                <span class="satellite-orb" aria-hidden="true"></span><span class="satellite-copy"><small>01 / Frame</small><b>Research</b></span>
+              </button>
+              <button class="system-satellite system-satellite--translate" type="button" data-lens="translate" aria-pressed="false" aria-controls="lens-panel" aria-label="Translate: systems and interaction">
+                <span class="satellite-orb" aria-hidden="true"></span><span class="satellite-copy"><small>02 / Translate</small><b>Systems</b></span>
+              </button>
+              <button class="system-satellite system-satellite--verify" type="button" data-lens="verify" aria-pressed="false" aria-controls="lens-panel" aria-label="Verify: prototypes and iteration">
+                <span class="satellite-orb" aria-hidden="true"></span><span class="satellite-copy"><small>03 / Verify</small><b>Prototype</b></span>
+              </button>
+            </div>
+            <div id="lens-panel" class="lens-stage system-detail" role="tabpanel" aria-labelledby="lens-frame" tabindex="0">
+              <div class="stage-marker"><span class="stage-index">01</span><span class="stage-kind">Before making</span></div>
+              <div class="stage-copy">
+                <p class="stage-title">Find the question hidden inside the brief.</p>
+                <p class="stage-text">I map the people, dependencies, and constraints around a problem before deciding which part is actually worth changing.</p>
+                <p class="stage-proof"><span>In practice</span> Interviews, observation, systems mapping</p>
+              </div>
+            </div>
+            <div class="lens-switcher system-switcher" role="tablist" aria-label="Ways of working">
+              <button id="lens-frame" class="lens-button is-active" type="button" role="tab" aria-selected="true" aria-controls="lens-panel" data-lens="frame"><span>01</span> Frame</button>
+              <button id="lens-translate" class="lens-button" type="button" role="tab" aria-selected="false" aria-controls="lens-panel" data-lens="translate"><span>02</span> Translate</button>
+              <button id="lens-verify" class="lens-button" type="button" role="tab" aria-selected="false" aria-controls="lens-panel" data-lens="verify"><span>03</span> Verify</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="work section-space">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">02 / Selected work</p>
+            <p class="section-note">Five projects, arranged as three ways of making: a world to enter, a story to navigate, and a city to reshape.</p>
+          </div>
+
+          <div class="portfolio-explorer" data-active-portfolio="worlds">
+            <div class="portfolio-tabs" role="tablist" aria-label="Portfolio chapters">
+              <button id="portfolio-worlds-tab" class="portfolio-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="portfolio-worlds" data-portfolio="worlds"><span>01</span> Abyss Kitchen</button>
+              <button id="portfolio-stories-tab" class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-stories" data-portfolio="stories"><span>02</span> Library + Four Crossings</button>
+              <button id="portfolio-cities-tab" class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-cities" data-portfolio="cities"><span>03</span> Future City + Streets</button>
+            </div>
+
+            <div class="portfolio-panels">
+              <article id="portfolio-worlds" class="portfolio-panel is-active" role="tabpanel" aria-labelledby="portfolio-worlds-tab" tabindex="0" data-portfolio-panel="worlds">
+                <div class="portfolio-panel-heading">
+                  <p class="eyebrow">01 / Independent game / Interactive world</p>
+                  <h2>A world with its own appetite.</h2>
+                </div>
+                <article class="portfolio-project portfolio-project--feature">
+                  <a class="portfolio-project-media" href="project-abyss.html" aria-label="View Abyss Kitchen project page"><img src="assets/abyss-cover.png" alt="A warm underground kitchen in a dark fantasy world" /></a>
+                  <div class="portfolio-project-copy">
+                    <h3>Abyss Kitchen</h3>
+                    <p>A darkly playful management game: hunt for ingredients by day, then run a kitchen for monsters and followers of old gods at night.</p>
+                    <p class="portfolio-project-meta"><span>Format</span>Browser game / visual world-building / game interface</p>
+                    <div class="portfolio-actions"><a class="text-link" href="project-abyss.html">View project <span>&rarr;</span></a><a class="text-link" href="https://y2781647622-rgb.github.io/Game/">Enter live site <span>&rarr;</span></a></div>
+                  </div>
+                </article>
+              </article>
+
+              <article id="portfolio-stories" class="portfolio-panel" role="tabpanel" aria-labelledby="portfolio-stories-tab" tabindex="0" data-portfolio-panel="stories" hidden>
+                <div class="portfolio-panel-heading">
+                  <p class="eyebrow">02 / Narrative navigation / Interactive storytelling</p>
+                  <h2>Give a path its own point of view.</h2>
+                </div>
+                <div class="portfolio-projects">
+                  <article class="portfolio-project">
+                    <a class="portfolio-project-media" href="project-navigator.html" aria-label="View Library Wayfinding System project page"><img src="assets/navigator-cover.png" alt="A luminous route leading through a dark library toward a book" /></a>
+                    <div class="portfolio-project-copy">
+                      <h3>Library Wayfinding System</h3>
+                      <p>A bilingual, game-like route-finding experience that turns a library call number into an approachable search journey - one clue, decision, and destination at a time.</p>
+                      <p class="portfolio-project-meta"><span>Focus</span>Interaction flow / bilingual interface / narrative guidance</p>
+                      <div class="portfolio-actions"><a class="text-link" href="project-navigator.html">View project <span>&rarr;</span></a><a class="text-link" href="https://y2781647622-rgb.github.io/Library/">Enter live site <span>&rarr;</span></a></div>
+                    </div>
+                  </article>
+                  <article class="portfolio-project">
+                    <a class="portfolio-project-media" href="project-crossings.html" aria-label="View Four Crossings of the Chishui River project page"><img src="assets/crossings-cover.png" alt="A crimson topographic landscape with routes crossing a winding river" /></a>
+                    <div class="portfolio-project-copy">
+                      <h3>Four Crossings of the Chishui River</h3>
+                      <p>A bilingual digital narrative that turns a decisive 1935 campaign into an explorable tactical map.</p>
+                      <p class="portfolio-project-meta"><span>Format</span>Interactive narrative / information design / tactical simulation</p>
+                      <div class="portfolio-actions"><a class="text-link" href="project-crossings.html">View project <span>&rarr;</span></a><a class="text-link" href="https://y2781647622-rgb.github.io/IDV-Final-Project/">Enter live site <span>&rarr;</span></a></div>
+                    </div>
+                  </article>
+                </div>
+              </article>
+
+              <article id="portfolio-cities" class="portfolio-panel" role="tabpanel" aria-labelledby="portfolio-cities-tab" tabindex="0" data-portfolio-panel="cities" hidden>
+                <div class="portfolio-panel-heading">
+                  <p class="eyebrow">03 / Future city / Streets and shared care</p>
+                  <h2>Make a future city feel inhabitable.</h2>
+                </div>
+                <div class="portfolio-projects">
+                  <article class="portfolio-project">
+                    <a class="portfolio-project-media" href="project-terralink.html" aria-label="View Terra-Link project page"><img src="assets/terralink-home-cover.png" alt="A night-time rooftop community garden connected by subtle glowing paths" /></a>
+                    <div class="portfolio-project-copy">
+                      <h3>Terra-Link</h3>
+                      <p>A low-pressure support system that uses shared space, gentle prompts, and everyday participation to help young adults living alone move from isolation toward connection.</p>
+                      <p class="portfolio-project-meta"><span>Focus</span>Community care / systems mapping / spatial touchpoints</p>
+                      <div class="portfolio-actions"><a class="text-link" href="project-terralink.html">View project <span>&rarr;</span></a><a class="text-link" href="terralink-research-deck.pdf" target="_blank" rel="noopener">Read research deck <span>&rarr;</span></a></div>
+                    </div>
+                  </article>
+                  <article class="portfolio-project">
+                    <a class="portfolio-project-media" href="project-streets.html" aria-label="View Future Streets project page"><img src="assets/streets-cover.png" alt="A delivery robot moving through a Singapore HDB void deck at dusk" /></a>
+                    <div class="portfolio-project-copy">
+                      <h3>Future Streets</h3>
+                      <p>A future-facing study of how delivery robots might coexist with people in Singapore's HDB neighbourhoods without disrupting the everyday rhythm of shared space.</p>
+                      <p class="portfolio-project-meta"><span>Focus</span>Future wheel / cultural research / urban systems</p>
+                      <div class="portfolio-actions"><a class="text-link" href="project-streets.html">View project <span>&rarr;</span></a><a class="text-link" href="https://y2781647622-rgb.github.io/User-Experience/">Enter live site <span>&rarr;</span></a></div>
+                    </div>
+                  </article>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="legacy-work" class="work shell section-space" hidden>
+        <div class="section-heading">
+          <p class="eyebrow">02 / Selected work</p>
+          <p class="section-note">Three research-led cases. Two personal interactive worlds. Together, they show how I think and what I make when there is no fixed brief.</p>
+        </div>
+
+        <!-- Replace title, description, role, dates, tags and image placeholders with your own project material. -->
+        <article class="case-card case-card--primary">
+          <div class="case-number">01</div>
+          <a class="case-media media-map media-ux" href="project-streets.html" aria-label="View Future Streets project page">
+            <img class="project-cover-image" src="assets/streets-cover.png" alt="A delivery robot moving through a Singapore HDB void deck at dusk" />
+            <span class="media-caption"><b>Live project</b> / future systems research</span>
+          </a>
+          <div class="case-copy">
+            <p class="case-meta">[01] · Speculative systems design · Research + interaction</p>
+            <h2><a href="project-streets.html">Future Streets</a></h2>
+            <p class="case-summary">A future-facing study of how delivery robots might coexist with people in Singapore’s HDB neighbourhoods—without disrupting the everyday rhythm of shared space.</p>
+            <div class="case-detail">
+              <p><span>Project focus</span>Future wheel, cultural research, urban systems, speculative prototypes</p>
+              <a class="text-link" href="project-streets.html">View project <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card case-card--split">
+          <div class="case-number">02</div>
+          <a class="case-media media-frames media-library" href="project-navigator.html" aria-label="View Library Wayfinding System project page">
+            <img class="project-cover-image" src="assets/navigator-cover.png" alt="A luminous route leading through a dark library toward a book" />
+            <span class="media-caption"><b>Live project</b> / narrative navigation interface</span>
+          </a>
+          <div class="case-copy">
+            <p class="case-meta">[02] · Interaction design · Narrative wayfinding</p>
+            <h2><a href="project-navigator.html">Library Wayfinding System</a></h2>
+            <p class="case-summary">A bilingual, game-like route-finding experience that turns a library call number into an approachable search journey—one clue, decision, and destination at a time.</p>
+            <div class="case-detail">
+              <p><span>Project focus</span>Interaction flow, bilingual interface, progressive disclosure, narrative guidance</p>
+              <a class="text-link" href="project-navigator.html">View project <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card case-card--terralink">
+          <div class="case-number">03</div>
+          <a class="case-media media-terralink" href="project-terralink.html" aria-label="View Terra-Link project page">
+            <img class="project-cover-image" src="assets/terralink-home-cover.png" alt="A night-time rooftop community garden connected by subtle glowing paths" />
+            <span class="media-caption"><b>Project film</b> / community care system</span>
+          </a>
+          <div class="case-copy">
+            <p class="case-meta">[03] / Social systems design / Community care</p>
+            <h2><a href="project-terralink.html">Terra-Link</a></h2>
+            <p class="case-summary">A low-pressure support system that uses shared space, gentle prompts, and everyday participation to help young adults living alone move from isolation toward connection.</p>
+            <div class="case-detail">
+              <p><span>Project focus</span>Research synthesis, systems mapping, spatial touchpoints, speculative service design</p>
+              <a class="text-link" href="project-terralink.html">View project <span>→</span></a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="legacy-personal" class="personal section-space" hidden>
+        <div class="shell">
+          <div class="section-heading personal-heading">
+            <p class="eyebrow">03 / Personal index</p>
+            <p class="section-note">A small, evolving collection of visual studies. This is where my point of view becomes visible beyond a project brief.</p>
+          </div>
+          <div class="personal-explorer" data-active-piece="game">
+            <div class="personal-canvas">
+              <img class="personal-cover-image" src="assets/abyss-cover.png" alt="A warm underground kitchen in a dark fantasy world" />
+              <span class="canvas-id">P/03</span>
+              <span class="canvas-title">abyss kitchen</span>
+            </div>
+            <div id="personal-detail" class="personal-detail" role="tabpanel" aria-labelledby="personal-game" tabindex="0">
+              <p class="eyebrow personal-type">Independent game / interactive world</p>
+              <h2 class="personal-title">Abyss Kitchen</h2>
+              <p class="personal-text">A darkly playful management game: hunt for ingredients by day, then run a kitchen for monsters and followers of old gods at night.</p>
+              <p class="personal-meta"><span>Format</span><b>Browser game / visual world-building / game interface</b></p>
+              <div class="personal-actions"><a class="text-link personal-link" href="project-abyss.html">View project <span>→</span></a><a class="text-link personal-live-link" href="https://y2781647622-rgb.github.io/Game/">Enter live site <span>↗</span></a></div>
+            </div>
+            <div class="personal-picker" role="tablist" aria-label="Personal design studies">
+              <button class="personal-tab is-active" id="personal-game" type="button" role="tab" aria-selected="true" aria-controls="personal-detail" data-piece="game"><span>03</span> Abyss Kitchen</button>
+              <button class="personal-tab" id="personal-crossing" type="button" role="tab" aria-selected="false" aria-controls="personal-detail" data-piece="crossing"><span>04</span> Four Crossings</button>
+            </div>
+          </div>
+          <p class="personal-caption">These are not secondary projects. They show the visual worlds, pacing, and interaction choices I make when I am free to set the tone as well as solve the problem.</p>
+        </div>
+      </section>
+
+      <section id="ai-practice" class="ai-section section-space">
+        <div class="shell">
+          <div class="section-heading ai-heading">
+            <p class="eyebrow">04 / AI in practice</p>
+            <p class="section-note">AI is most useful to me when it makes a line of inquiry <em>faster to test</em>—not easier to assume.</p>
+          </div>
+          <div class="ai-workflow" data-active-ai="gemini">
+            <div class="ai-tools" role="tablist" aria-label="My AI workflow">
+              <button class="ai-tool is-active" id="ai-gemini" type="button" role="tab" aria-selected="true" aria-controls="ai-tool-panel" data-ai="gemini"><span>01</span> Doubao + Gemini</button>
+              <button class="ai-tool" id="ai-codex" type="button" role="tab" aria-selected="false" aria-controls="ai-tool-panel" data-ai="codex"><span>02</span> Codex + DeepSeek</button>
+              <button class="ai-tool" id="ai-hunyuan" type="button" role="tab" aria-selected="false" aria-controls="ai-tool-panel" data-ai="hunyuan"><span>03</span> Hunyuan</button>
+            </div>
+            <article id="ai-tool-panel" class="ai-tool-panel" role="tabpanel" aria-labelledby="ai-gemini" tabindex="0">
+              <p class="eyebrow ai-tool-label">Doubao + Gemini / language, planning, video</p>
+              <div class="ai-tool-copy"><h3>Turn research into a direction people can enter.</h3><p>I use Doubao and Gemini to explore copy, shape early project plans, and storyboard short video directions from my own research. I select, rewrite, and set the final voice.</p></div>
+              <figure class="ai-tool-visual"><img class="ai-tool-image" src="assets/ai-gemini-v2.png" alt="A dark research installation with translucent layers and a red inquiry line" /><figcaption>Research / synthesis</figcaption></figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer shell">
+      <span>© <span id="year"></span> Yang Shenghua</span>
+      <span>Systems, stories, interaction.</span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
