@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>杨生华｜定制简历目录</title>
+    <style>
+      :root { color: #1d2738; background: #e8edf3; font-family: Inter, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; }
+      * { box-sizing: border-box; } body { margin: 0; } main { width: min(1040px, calc(100% - 40px)); margin: 48px auto; } h1 { margin: 0; font-size: 32px; } .intro { margin: 10px 0 28px; color: #475569; line-height: 1.65; } h2 { margin: 30px 0 12px; font-size: 18px; } .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } .card { padding: 20px; background: #fff; border: 1px solid #cbd5e1; border-radius: 14px; box-shadow: 0 6px 18px rgba(15,23,42,.06); } .card h3 { margin: 0; font-size: 17px; } .card p { min-height: 40px; margin: 7px 0 16px; color: #64748b; font-size: 13px; } .card div { display: flex; gap: 8px; } .card a { padding: 8px 10px; color: #0f766e; border: 1px solid #99d6cd; border-radius: 7px; font-size: 13px; font-weight: 700; text-decoration: none; } .card a:hover { background: #f0fdfa; } .note { margin: 28px 0 0; padding: 16px; color: #475569; background: #fff; border-left: 4px solid #0f766e; line-height: 1.65; } @media (max-width: 760px) { main { width: min(100% - 28px, 560px); margin: 28px auto; } .grid { grid-template-columns: 1fr; } }
+      /* Editorial directory treatment layered over the functional base styles above. */
+      :root { color: #15243c; background: #eef0f2; }
+      body { min-height: 100vh; background: radial-gradient(circle at 82% 10%, #ead7ce 0, transparent 27%), linear-gradient(135deg, #f6f4ef 0%, #e4e9ee 100%); }
+      body::before { position: fixed; top: 0; left: 0; width: 100%; height: 5px; background: #b66d47; content: ""; }
+      main { position: relative; width: min(1080px, calc(100% - 48px)); margin: 0 auto; padding: 68px 0; }
+      main::after { position: absolute; top: 56px; right: 0; width: 160px; height: 1px; background: #b66d47; content: ""; }
+      h1 { color: #15243c; font-family: Georgia, "Times New Roman", serif; font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -.055em; line-height: .96; }
+      .intro { max-width: 660px; margin: 18px 0 44px; color: #526176; font-size: 15px; line-height: 1.8; }
+      h2 { display: flex; align-items: center; gap: 10px; margin: 36px 0 16px; color: #15243c; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+      h2::before { width: 28px; height: 2px; background: #b66d47; content: ""; }
+      .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+      .card { position: relative; min-height: 188px; padding: 24px 22px 20px; overflow: hidden; border: 0; border-radius: 0; background: rgba(255, 255, 255, .88); box-shadow: 0 12px 32px rgba(31, 46, 65, .10); transition: transform .18s ease, box-shadow .18s ease; }
+      .card::before { position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: #15243c; content: ""; }
+      .card:hover { transform: translateY(-4px); box-shadow: 0 18px 38px rgba(31, 46, 65, .16); }
+      .card h3 { color: #15243c; font-size: 18px; line-height: 1.35; }
+      .card p { min-height: 44px; margin: 8px 0 22px; color: #778398; font-family: Georgia, "Times New Roman", serif; font-size: 13px; line-height: 1.35; }
+      .card div { gap: 7px; }
+      .card a { padding: 8px 9px; color: #15243c; border: 1px solid #d5dbe3; border-radius: 0; background: #fff; font-size: 12px; font-weight: 760; }
+      .card a:hover { color: #fff; border-color: #b66d47; background: #b66d47; }
+      .note { margin-top: 38px; padding: 19px 22px; color: #e7ecf3; border: 0; border-left: 4px solid #b66d47; background: #15243c; box-shadow: 0 12px 30px rgba(21, 36, 60, .14); }
+      .note strong { color: #fff; }
+      @media (max-width: 760px) { main { width: min(100% - 28px, 560px); padding: 42px 0; } .grid { grid-template-columns: 1fr; } .card { min-height: 0; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>杨生华 / Shenghua Yang</h1>
+      <p class="intro">每个方向均有中英文独立 HTML 页面，可直接打开后打印为 A4 PDF。内容已加入 KKH PREMs Toolkits 服务设计项目，并删除了校园领导力板块。</p>
+      <h2>优先投递：已有直接经历支撑</h2>
+      <section class="grid"><article class="card"><h3>建筑 / 建成环境与工程科技</h3><p>Built Environment &amp; Construction Technology</p><div><a href="built-environment-zh.html">中文简历</a><a href="built-environment-en.html">English resume</a></div></article><article class="card"><h3>UI/UX 研究与交互设计</h3><p>UX Research &amp; Interaction Design</p><div><a href="uiux-zh.html">中文简历</a><a href="uiux-en.html">English resume</a></div></article><article class="card"><h3>产品设计与企业系统</h3><p>Product Design &amp; Enterprise Systems</p><div><a href="product-design-zh.html">中文简历</a><a href="product-design-en.html">English resume</a></div></article><article class="card"><h3>医疗服务设计与患者体验</h3><p>Healthcare Service Design &amp; Patient Experience</p><div><a href="healthcare-service-zh.html">中文简历</a><a href="healthcare-service-en.html">English resume</a></div></article><article class="card"><h3>项目协调与运营分析</h3><p>Project Coordination &amp; Operations</p><div><a href="pm-zh.html">中文简历</a><a href="pm-en.html">English resume</a></div></article></section>
+      <h2>转型投递：建议聚焦产品、体验与研究岗位</h2>
+      <section class="grid"><article class="card"><h3>具身智能与人机交互</h3><p>Embodied Intelligence &amp; Human-Robot Interaction</p><div><a href="embodied-intelligence-zh.html">中文简历</a><a href="embodied-intelligence-en.html">English resume</a></div></article><article class="card"><h3>AI 产品与人本智能体验</h3><p>AI Product &amp; Human-Centered AI</p><div><a href="ai-product-zh.html">中文简历</a><a href="ai-product-en.html">English resume</a></div></article></section>
+      <p class="note"><strong>定位提醒：</strong>“建筑方向”已准确定位为建成环境、工程科技和数字化协同，不建议以建筑师岗位投递；“具身智能”和“AI”版本定位为 HRI / 人因、AI 产品和 AI UX，而非算法或模型训练工程师。KKH 项目仍在进行，结束后请补入真实的方法、参与对象、交付物和成果。</p>
+    </main>
+  </body>
+</html>
